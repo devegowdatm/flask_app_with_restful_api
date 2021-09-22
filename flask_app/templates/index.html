@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}Inventory App{% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="description" />
+
+    {% block base_styles %}
+      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/index.css')}}">
+    {% endblock %}
+  </head>
+  <body>
+    {% block container %}
+      <div id="root">
+        FLASK APP
+         <h1>Inventory Items</h1>
+        <div class="form-container">
+          <div id="form-main">
+            <div id="form-div">
+              <form class="item-form" id="item-form">
+                <p class="name">
+                  <input name="name" type="text" class="item-input"
+                    required placeholder="Name" id="name" />
+                </p>
+                <p class="price">
+                  <input name="number" type="number" required class="item-input"
+                  id="price" placeholder="Price In $" />
+                </p>
+                <p class="text">
+                  <textarea name="message" class="item-input" required
+                    id="description" placeholder="Description"></textarea>
+                </p>
+                <p class="file">
+                  <input name="image" type="file" accept="image/*"
+                    id="file" class="item-input" />
+                </p>
+                <div class="submit">
+                  <button type="submit" class="button-submit">SUBMIT</button>
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+    {% block base_scripts %}
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}">
+      </script>
+    {% endblock %}
+  </body>
+</html>
+
+
+
