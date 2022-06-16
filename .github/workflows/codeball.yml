@@ -6,12 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Codeball
     steps:
-      # Run Codeball on all new Pull Requests 🚀
-      # For customizations and more documentation, see https://github.com/sturdy-dev/codeball-action
       - name: Codeball
         uses: sturdy-dev/codeball-action@v2
         with:
-          approvePullRequests: "true"
+          approvePullRequests: "false"
           labelPullRequestsWhenApproved: "true"
           labelPullRequestsWhenReviewNeeded: "true"
-          failJobsWhenReviewNeeded: "true"
+          failJobsWhenReviewNeeded: "false"
