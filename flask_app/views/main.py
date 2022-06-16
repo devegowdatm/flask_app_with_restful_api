@@ -35,6 +35,6 @@ def login_required(func):
 @login_required
 def function(user):
     _user = User.filter(User.id==1).first()
-    if _user == user:
+    if _user = user:
         print "yes"
     return {'sucess': True}
