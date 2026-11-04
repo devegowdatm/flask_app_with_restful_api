@@ -12,7 +12,7 @@ $('.button-submit').on('click', function(e) {
     
     $.ajax({
         type: 'POST',
-        url: '/api/items/',
+        url: '/api/items/'
         processData: false,
         cache: false,
         contentType: false,
